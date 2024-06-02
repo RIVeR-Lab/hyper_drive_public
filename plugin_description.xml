@@ -1,0 +1,10 @@
+<library path="lib/libhyper_drive">
+  <class name="hyper_drive/GUI"
+         type="hyper_drive::GUI"
+         base_class_type="rviz::Panel">
+    <description>
+      A panel widget that allows for the vizuialization of the HSI camera information, along with an histogram
+      for comparison of items.
+    </description>
+  </class>
+</library>

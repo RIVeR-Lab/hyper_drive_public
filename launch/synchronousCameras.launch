@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- Hyperspectral Cameras -->
+    <node pkg="hyper_drive" type="synchronousCubes.py" name="cameraProcessors" output="screen">
+        <param name="sleep" value="0.001"/>
+        <param name="x_frame_rate" value="10"/>
+        <param name="x_integration_time" value="2.0"/>
+        <param name="i_frame_rate" value="10"/>
+        <param name="i_integration_time" value="5.0"/>
+        <param name="time_wait" value="0.5"/>
+    </node>
+    <!-- RGB HD Camera -->
+    <include file="$(find avt_vimba_camera)/launch/mono_camera.launch">
+        <arg name="guid" value="DEV_1AB22C025217" />
+        <arg name="pixel_format" value="RGB8"/>
+        <arg name="height" value="2054" />   
+        <!-- <arg name="width" value="2464" /> This param causes issues when set -->
+        <arg name="offset_x" value="0" />
+        <arg name="offset_y" value="0" />          
+    </include>    
+    <node pkg="hyper_drive" type="hsi_hist.py" name="GUI_renderer" output="screen"/>
+    <node type="rviz" name="rviz" pkg="rviz" args="-d $(find hyper_drive)/rviz_configs/hsi_default.rviz"/>
+</launch>

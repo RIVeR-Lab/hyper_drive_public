@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<array version="1" kind="ROI_FRAME">
+    <data_format version="1" kind="roi_frame_data_format" byte_depth="4" data_type="float" max_value="8191" saturation_value="7100" no_data_value="0" nr_cols="640" nr_rows="512" offset_sensor_x="0" offset_sensor_y="0">
+        <rois_sensor>
+            <roi version="1" nr_cols="640" nr_rows="512" offset_sensor_x="0" offset_sensor_y="0"/>
+        </rois_sensor>
+    </data_format>
+    <data_info version="1" kind="image_data_info" name="" data_source="" system_id="" valid="true" acquisition_time="2023-02-08T23:07:27.136790Z" completion_time="1970-01-01T00:00:00.000000Z" integration_time_ms="5" is_white_balanced="false" dark_corrected="false" vignetting_corrected="false">
+        <properties version="1">
+            <property name="burst_index" type="unsigned int" value="0"/>
+            <property name="hdr flag enabled" type="bool" value="false"/>
+            <property name="hdr integration times per band" type="std::vector&lt;double&gt;" value="5"/>
+            <property name="hdr nr frames" type="unsigned int" value="1"/>
+            <property name="number of averaged frames" type="unsigned int" value="1"/>
+            <property name="sensor bit depth" type="unsigned int" value="13"/>
+            <property name="temperature_c" type="double" value="25.001999999999999"/>
+            <property name="timestamp s" type="double" value="161132847.13679001"/>
+        </properties>
+    </data_info>
+</array>
+
